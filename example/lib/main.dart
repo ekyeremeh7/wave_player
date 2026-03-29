@@ -95,7 +95,6 @@ class _WavePlayerExampleState extends State<WavePlayerExample> {
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: 10,
           children: [
             _buildSectionTitle('Controller Player'),
             _buildControllerPlayer(),
@@ -185,7 +184,7 @@ class _WavePlayerExampleState extends State<WavePlayerExample> {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.1),
+            color: Colors.black.withOpacity(0.1),
             spreadRadius: 1,
             blurRadius: 8,
             offset: const Offset(0, 2),

@@ -1,9 +1,9 @@
 name: wave_player
 description: "A Flutter package for audio waveform visualization and playback with customizable UI components."
 version: 0.0.5
-homepage: https://github.com/QuangNH0606/wave_player
-repository: https://github.com/QuangNH0606/wave_player
-issue_tracker: https://github.com/QuangNH0606/wave_player/issues
+homepage: https://github.com/ekyeremeh7/wave_player
+repository: https://github.com/ekyeremeh7/wave_player
+issue_tracker: https://github.com/ekyeremeh7/wave_player/issues
 documentation: https://github.com/QuangNH0606/wave_player#readme
 topics:
   - audio
@@ -13,7 +13,7 @@ topics:
   - flutter
 
 environment:
-  sdk: ^3.6.0
+  sdk: ">=3.5.0 <4.0.0"
   flutter: ">=3.19.0"
 
 platforms:
@@ -25,7 +25,8 @@ platforms:
 dependencies:
   flutter:
     sdk: flutter
-  just_audio: ^0.10.5
+  # 0.10.x requires Dart ^3.6.0; 0.9.46 supports Dart 3.5.x (same API used here).
+  just_audio: ^0.9.46
   http: ^1.5.0
 
 dev_dependencies:

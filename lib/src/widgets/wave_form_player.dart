@@ -762,9 +762,9 @@ class _WaveformPlayerState extends State<WaveformPlayer>
   Widget _buildWaveformError(double width) {
     return Row(
       mainAxisSize: MainAxisSize.min,
-      spacing: 5,
       children: [
         const Icon(Icons.error_outline, size: 16, color: Color(0xFFFF3B30)),
+        const SizedBox(width: 5),
         Flexible(
           child: Text(
             _errorMessage ?? 'Error',

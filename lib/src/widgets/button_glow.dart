@@ -198,7 +198,7 @@ class _GlowPainter extends ChangeNotifier implements CustomPainter {
     final opacity = opacityTween.evaluate(progress);
 
     final paint = Paint()
-      ..color = glowColor.withValues(alpha: opacity)
+      ..color = glowColor.withOpacity(opacity)
       ..style = PaintingStyle.fill;
 
     final glowSize = math.min(size.width, size.height);

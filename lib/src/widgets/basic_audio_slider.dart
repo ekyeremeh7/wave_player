@@ -386,7 +386,7 @@ class BasicAudioSliderPainter extends CustomPainter {
       final gradient = LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
-        colors: [activeColor, activeColor.withValues(alpha: 0.8)],
+        colors: [activeColor, activeColor.withOpacity(0.8)],
       );
       paint.shader =
           gradient.createShader(Rect.fromLTWH(x, y, barWidth, scaledH));
@@ -400,7 +400,7 @@ class BasicAudioSliderPainter extends CustomPainter {
       final c = paint.shader != null ? activeColor : paint.color;
       paint.shader = null;
       paint.color =
-          c.withValues(alpha: Curves.easeOut.transform(entranceOpacity));
+          c.withOpacity(Curves.easeOut.transform(entranceOpacity));
     }
 
     canvas.drawRRect(
@@ -443,7 +443,7 @@ class BasicAudioSliderPainter extends CustomPainter {
     canvas.drawCircle(
       Offset(cx, cy),
       radius,
-      Paint()..color = thumbColor.withValues(alpha: entranceFade),
+      Paint()..color = thumbColor.withOpacity(entranceFade),
     );
 
     // Center dot
@@ -451,7 +451,7 @@ class BasicAudioSliderPainter extends CustomPainter {
     canvas.drawCircle(
       Offset(cx, cy),
       dotR,
-      Paint()..color = Colors.white.withValues(alpha: entranceFade),
+      Paint()..color = Colors.white.withOpacity(entranceFade),
     );
   }
 
@@ -466,7 +466,7 @@ class BasicAudioSliderPainter extends CustomPainter {
         Rect.fromCenter(center: Offset(cx, cy), width: scaledW, height: barH),
         const Radius.circular(4.0),
       ),
-      Paint()..color = thumbColor.withValues(alpha: entranceFade),
+      Paint()..color = thumbColor.withOpacity(entranceFade),
     );
   }
 
@@ -481,7 +481,7 @@ class BasicAudioSliderPainter extends CustomPainter {
         Rect.fromCenter(center: Offset(cx, cy), width: scaledW, height: barH),
         const Radius.circular(16.0),
       ),
-      Paint()..color = thumbColor.withValues(alpha: entranceFade),
+      Paint()..color = thumbColor.withOpacity(entranceFade),
     );
 
     // Center dot
@@ -489,7 +489,7 @@ class BasicAudioSliderPainter extends CustomPainter {
     canvas.drawCircle(
       Offset(cx, cy),
       dotR,
-      Paint()..color = Colors.white.withValues(alpha: entranceFade),
+      Paint()..color = Colors.white.withOpacity(entranceFade),
     );
   }
 
